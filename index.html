@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центральний процесор</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --surface-light: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+            --text-tertiary: #b0b0b0;
+            --accent-color: #969696;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--text-primary);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: var(--text-secondary);
+            margin-top: 30px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        figure {
+            background-color: var(--surface-light);
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        figcaption {
+            color: var(--text-tertiary);
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .table-of-contents {
+            width: 65%;
+            background-color: var(--surface-light);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .table-of-contents ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .table-of-contents li {
+            margin-bottom: 8px;
+        }
+
+        .info-box {
+            background-color: var(--surface-light);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 15px;
+            float: right;
+            width: 300px;
+            margin-left: 20px;
+        }
+
+        .info-box-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .section-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        code {
+            background-color: var(--surface-light);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: var(--text-secondary);
+        }
+
+        blockquote {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 20px 0;
+            color: var(--text-tertiary);
+            font-style: italic;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Центральний процесор</h1>
+
+    <div class="info-box">
+        <div class="info-box-title">Центральний процесор</div>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/2023_Intel_Core_i7_12700KF_%283%29.jpg/330px-2023_Intel_Core_i7_12700KF_%283%29.jpg" alt="Сучасний мікропроцесор Intel Core i7">
+            <figcaption>Сучасний мікропроцесор Intel Core i7</figcaption>
+        </figure>
+        <p><strong>Інші назви:</strong> ЦП, CPU, мікропроцесор</p>
+        <p><strong>Розроблено перший:</strong> 1970-ті роки</p>
+        <p><strong>Розробники процессорів:</strong> Intel, AMD, ARM, IBM та інші</p>
+    </div>
+
+    <div class="table-of-contents">
+        <h2>Зміст</h2>
+        <ul>
+            <li><a href="#definition">1. Визначення</a></li>
+            <li><a href="#history">2. Історія розвитку</a></li>
+            <li><a href="#architecture">3. Архітектура</a>
+                <ul>
+                    <li><a href="#components">3.1 Основні компоненти</a></li>
+                    <li><a href="#registers">3.2 Регістри</a></li>
+                </ul>
+            </li>
+            <li><a href="#performance">4. Продуктивність</a></li>
+            <li><a href="#manufacturers">5. Виробники</a></li>
+            <li><a href="#see-also">6. Див. також</a></li>
+        </ul>
+    </div>
+
+    <h2 id="definition">Визначення</h2>
+    <p><strong>Центральний процесор (ЦП)</strong>, також відомий як <strong>CPU</strong> (англ. Central Processing Unit) - це основний компонент комп'ютера, який виконує інструкції комп'ютерної програми, здійснюючи арифметичні, логічні, операції керування та введення-виведення (I/O).</p>
+
+    <p>Сучасні ЦП є <strong>мікропроцесорами</strong>, що означає, що вони містяться на одній інтегральній мікросхемі. Інтегральна схема, що містить ЦП, також може містити пам'ять, периферійні інтерфейси та інші компоненти комп'ютера; такі інтегральні пристрої називаються <strong>мікроконтролерами</strong> або <strong>системами на кристалі (SoC)</strong>.</p>
+
+    <h2 id="history">Історія розвитку</h2>
+    <p>Перші ЦП були розроблені як частина комп'ютерів у середині 20 століття. Вони були великими та складалися з окремих компонентів, таких як електронні лампи та транзистори.</p>
+
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Intel_C4004.jpg/250px-Intel_C4004.jpg" alt="Intel 4004 - перший комерційний мікропроцесор">
+        <figcaption>Intel 4004 - перший комерційний мікропроцесор (1971 рік)</figcaption>
+    </figure>
+
+    <p>Важливі етапи розвитку:</p>
+    <ul>
+        <li><strong>1971</strong>: Intel 4004 - перший комерційний мікропроцесор</li>
+        <li><strong>1978</strong>: Intel 8086 - засновник архітектури x86</li>
+        <li><strong>1985</strong>: Intel 80386 - перший 32-бітний процесор x86</li>
+        <li><strong>1993</strong>: Intel Pentium - початок сучасної ери процесорів</li>
+        <li><strong>2000-ні</strong>: поява багатоядерних процесорів</li>
+    </ul>
+
+    <h2 id="architecture">Архітектура</h2>
+    <p>Сучасні ЦП зазвичай мають <strong>гарвардську</strong> або <strong>фон-нейманівську</strong> архітектуру, хоча часто використовуються гібридні підходи.</p>
+
+    <h3 id="components">Основні компоненти</h3>
+    <p>Основними компонентами ЦП є:</p>
+    <ol>
+        <li><strong>Арифметико-логічний пристрій (АЛП)</strong> - виконує арифметичні та логічні операції</li>
+        <li><strong>Блок керування</strong> - керує потоком інструкцій</li>
+        <li><strong>Регістри процесора</strong> - невеликі блоки пам'яті для швидкого доступу</li>
+        <li><strong>Кеш-пам'ять</strong> - швидка пам'ять для зберігання часто використовуваних даних</li>
+    </ol>
+
+    <figure>
+        <img src="https://elib.lntu.edu.ua/sites/default/files/elib_upload/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D0%B9%20%D0%BF%D0%BE%D1%81%D1%96%D0%B1%D0%BD%D0%B8%D0%BA%20%D0%9A%D0%BE%D0%BC%D0%BF%20%D1%81%D1%85%D0%B5%D0%BC%20%D1%82%D0%B0%20%D0%B0%D1%80%D1%85%D1%96%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF/page32.files/image002.jpg" alt="Спрощена схема архітектури CPU">
+        <figcaption>Спрощена схема архітектури CPU</figcaption>
+    </figure>
+
+    <h3 id="registers">Регістри</h3>
+    <p>Регістри процесора - це невеликі блоки пам'яті, які знаходяться безпосередньо в ЦП і забезпечують найшвидший доступ до даних. Основні типи регістрів:</p>
+    <ul>
+        <li><strong>Акумулятор</strong> - зберігає результати обчислень</li>
+        <li><strong>Регістр інструкцій</strong> - містить поточну інструкцію</li>
+        <li><strong>Лічильник команд</strong> - вказує на наступну інструкцію</li>
+        <li><strong>Регістр стану</strong> - містить інформацію про стан процесора</li>
+    </ul>
+
+    <h2 id="performance">Продуктивність</h2>
+    <p>Продуктивність ЦП зазвичай вимірюється в:</p>
+    <ul>
+        <li><strong>Тактовій частоті</strong> (ГГц) - кількість тактів за секунду</li>
+        <li><strong>IPS</strong> (інструкцій за секунду) - кількість інструкцій, що виконуються за секунду</li>
+        <li><strong>FLOPS</strong> - операцій з плаваючою комою за секунду</li>
+    </ul>
+
+    <blockquote>
+        "Закон Мура: кількість транзисторів у мікросхемі подвоюється приблизно кожні два роки."
+    </blockquote>
+
+    <h2 id="manufacturers">Виробники</h2>
+    <p>Основними виробниками ЦП є:</p>
+    <ul>
+        <li><strong>Intel</strong> - лідер ринку ПК (Core i3/i5/i7/i9, Xeon)</li>
+        <li><strong>AMD</strong> - основний конкурент Intel (Ryzen, EPYC)</li>
+        <li><strong>ARM</strong> - архітектура для мобільних пристроїв</li>
+        <li><strong>IBM</strong> - потужні серверні процесори (POWER)</li>
+    </ul>
+
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/AMD_EPYC_die.jpg" alt="Серверний процесор AMD EPYC">
+        <figcaption>Серверний процесор AMD EPYC</figcaption>
+    </figure>
+
+    <h2 id="see-also">Див. також</h2>
+    <ul>
+        <li><a href="https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D1%84%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D0%BE%D1%80" target="_blank">Графічний процесор (GPU)</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0_%D0%BF%D0%B0%D0%BC%27%D1%8F%D1%82%D1%8C" target="_blank">Оперативна пам'ять</a></li>
+        <li><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D0%BF%D0%BB%D0%B0%D1%82%D0%B0" target="_blank">Материнська плата</a></li>
+    </ul>
+
+    <div class="section-nav">
+        <div></div>
+        <div><a href="#top">Повернутися до початку</a> | <a href="https://uk.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D0%BE%D1%80" target="_blank">Вікіпедія</a></div>
+    </div>
+</body>
+</html>
